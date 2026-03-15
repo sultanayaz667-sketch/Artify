@@ -1,0 +1,128 @@
+.home-page {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.home-card {
+  background-color: white;
+  border-radius: 30px;
+  padding: 3rem 4rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.big-logo {
+  width: 120px;
+  height: 120px;
+  background-color: #4a6cf7;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 10px 20px rgba(74, 108, 247, 0.3);
+}
+
+.brand-name {
+  font-size: 3.5rem;
+  color: #000;
+  margin: 0.5rem 0;
+  line-height: 1.2;
+}
+
+.registered {
+  font-size: 1rem;
+  color: #4a6cf7;
+  vertical-align: super;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.btn-register {
+  background-color: #4a6cf7;
+  color: white;
+  box-shadow: 0 4px 10px rgba(74, 108, 247, 0.3);
+}
+
+.btn-register:hover {
+  background-color: #3a5bd9;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(74, 108, 247, 0.5);
+}
+
+.btn-login {
+  background-color: white;
+  color: #4a6cf7;
+  border: 2px solid #4a6cf7;
+}
+
+.btn-login:hover {
+  background-color: #4a6cf7;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(74, 108, 247, 0.3);
+}
+
+@media (max-width: 768px) {
+  .home-card {
+    padding: 2rem 1.5rem;
+  }
+  .brand-name {
+    font-size: 2.8rem;
+  }
+  .big-logo {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+  }
+  .btn {
+    min-width: 130px;
+    padding: 0.7rem 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 2.2rem;
+  }
+  .tagline {
+    font-size: 1.1rem;
+  }
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}

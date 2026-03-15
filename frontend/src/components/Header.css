@@ -1,0 +1,179 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-placeholder {
+  width: 40px;
+  height: 40px;
+  background-color: #4a6cf7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+.site-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4a6cf7;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-btn.login {
+  background-color: #4a6cf7;
+  color: white;
+}
+
+.auth-btn.login:hover {
+  background-color: #3a5bd9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 108, 247, 0.4);
+}
+
+.auth-btn.register {
+  background-color: white;
+  color: #4a6cf7;
+  border: 2px solid #4a6cf7;
+}
+
+.auth-btn.register:hover {
+  background-color: #4a6cf7;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ff6b81;
+  transform: translateY(-2px);
+}
+/* Existing styles above ... */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .logo-container {
+    margin-right: auto;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .auth-btn, .logout-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .site-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .logo-container {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .user-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .auth-btn, .logout-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}

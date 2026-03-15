@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+*.log
+db.sqlite3
+.DS_Store
+
+# Django
+*.pot
+*.pyc
+local_settings.py
+
+# React
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+
+# Environment variables
+.env

@@ -1,0 +1,115 @@
+.history-page {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.history-card {
+  background-color: white;
+  border-radius: 30px;
+  padding: 2.5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.history-card h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.no-history {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.history-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.history-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.history-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.history-details {
+  padding: 1rem;
+}
+
+.prompt {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.created {
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  flex: 1 1 auto;
+  min-width: 80px;
+}
+
+.btn-download {
+  background-color: #4a6cf7;
+  color: white;
+}
+
+.btn-download:hover {
+  background-color: #3a5bd9;
+}
+
+.btn-delete {
+  background-color: #ff4757;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #ff6b81;
+}
+
+.btn-share {
+  background-color: #00b894;
+  color: white;
+}
+
+.btn-share:hover {
+  background-color: #00a187;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+}
