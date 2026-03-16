@@ -8,13 +8,16 @@ function Generate({ token, onImageGenerated }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  // Use environment variable for API URL
+  const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
     try {
       const response = await axios.post(
-        'http://127.0.0.1:8000/api/generate/',
+        `${API_URL}/generate/`,
         { prompt },
         {
           headers: {

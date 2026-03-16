@@ -7,9 +7,12 @@ function History({ token }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  // Use environment variable for API URL
+  const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+
   const fetchHistory = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/history/', {
+      const response = await axios.get(`${API_URL}/history/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setHistory(response.data);
@@ -36,7 +39,7 @@ function History({ token }) {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this image?')) return;
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/delete/${id}/`, {
+      await axios.delete(`${API_URL}/delete/${id}/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchHistory();

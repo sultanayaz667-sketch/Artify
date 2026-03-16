@@ -11,10 +11,13 @@ function Register() {
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
 
+  // Use environment variable for API URL
+  const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://127.0.0.1:8000/api/register/', {
+      await axios.post(`${API_URL}/register/`, {
         username,
         password,
         email

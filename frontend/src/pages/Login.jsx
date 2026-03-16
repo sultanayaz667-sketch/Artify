@@ -9,10 +9,13 @@ function Login({ setToken }) {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  // Use environment variable for API URL
+  const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/token/', {
+      const response = await axios.post(`${API_URL}/token/`, {
         username,
         password
       });
